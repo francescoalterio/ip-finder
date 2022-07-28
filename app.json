@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "ip-finder",
+    "slug": "ip-finder",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
