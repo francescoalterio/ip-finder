@@ -21,22 +21,24 @@ const HomeScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <View>
-        <Text style={styles.title}>Find any IP</Text>
-        <TextInput
-          style={styles.ipInput}
-          value={ip}
-          onChangeText={(text) => setIp(text)}
-          placeholder="IP Here!"
-          placeholderTextColor="#999dba"
-        />
-      </View>
-      <View style={styles.btnFindContainer}>
-        <View style={styles.btnFindBorder2} />
-        <View style={styles.btnFindBorder1} />
-        <TouchableOpacity style={styles.btnFind} onPress={handleIPSearch}>
-          <Ionicons name={"locate"} size={80} color={"#8ba2d0"} />
-        </TouchableOpacity>
+      <View style={{ flex: 1 }}>
+        <View>
+          <Text style={styles.title}>Find any IP</Text>
+          <TextInput
+            style={styles.ipInput}
+            value={ip}
+            onChangeText={(text) => setIp(text)}
+            placeholder="IP Here!"
+            placeholderTextColor="#999dba"
+          />
+        </View>
+        <View style={styles.btnFindContainer}>
+          <View style={styles.btnFindBorder2} />
+          <View style={styles.btnFindBorder1} />
+          <TouchableOpacity style={styles.btnFind} onPress={handleIPSearch}>
+            <Ionicons name={"locate"} size={80} color={"#8ba2d0"} />
+          </TouchableOpacity>
+        </View>
       </View>
     </View>
   );
