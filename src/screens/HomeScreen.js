@@ -10,6 +10,14 @@ import Constanst from "expo-constants";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { colors } from "../constants/colors";
 
+import {
+  BannerAd,
+  BannerAdSize,
+  TestIds,
+} from "react-native-google-mobile-ads";
+
+const adUnitId = TestIds.BANNER;
+
 const HomeScreen = ({ navigation }) => {
   const [ip, setIp] = useState("");
 
@@ -40,6 +48,13 @@ const HomeScreen = ({ navigation }) => {
           </TouchableOpacity>
         </View>
       </View>
+      <BannerAd
+        unitId={adUnitId}
+        size={BannerAdSize.FULL_BANNER}
+        requestOptions={{
+          requestNonPersonalizedAdsOnly: true,
+        }}
+      />
     </View>
   );
 };

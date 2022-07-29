@@ -7,11 +7,19 @@ import HomeScreen from "./screens/HomeScreen";
 import IPDataScreen from "./screens/IPDataScreen";
 import { useNetInfo } from "@react-native-community/netinfo";
 import NotConnection from "./screens/NotConnection";
+import mobileAds from "react-native-google-mobile-ads";
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
+  mobileAds()
+    .initialize()
+    .then((adapterStatuses) => {
+      // Initialization complete!
+    });
+
   const netInfo = useNetInfo();
+
   return (
     <View style={styles.container}>
       <NavigationContainer>

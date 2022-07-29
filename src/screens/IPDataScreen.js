@@ -7,20 +7,60 @@ import {
   ScrollView,
   TouchableOpacity,
 } from "react-native";
-import React from "react";
+import React, { useEffect } from "react";
 import Constanst from "expo-constants";
 import Map from "../components/Map";
 import { colors } from "../constants/colors";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { SvgUri } from "react-native-svg";
 
+import {
+  BannerAd,
+  BannerAdSize,
+  TestIds,
+  useInterstitialAd,
+} from "react-native-google-mobile-ads";
+
+const adUnitId = TestIds.BANNER;
+
 const IPDataScreen = ({ navigation, route }) => {
+  const { isLoaded, isClosed, load, show } = useInterstitialAd(
+    TestIds.INTERSTITIAL,
+    {
+      requestNonPersonalizedAdsOnly: true,
+    }
+  );
+
   const handleGoBack = () => {
-    navigation.goBack();
+    if (isLoaded) {
+      show();
+    } else {
+      // No advert ready to show yet
+      navigation.goBack();
+    }
   };
+
+  useEffect(() => {
+    // Start loading the interstitial straight away
+    load();
+  }, [load]);
+
+  useEffect(() => {
+    if (isClosed) {
+      // Action after the ad is closed
+      navigation.goBack();
+    }
+  }, [isClosed, navigation]);
 
   return (
     <View style={styles.container}>
+      <BannerAd
+        unitId={adUnitId}
+        size={BannerAdSize.FULL_BANNER}
+        requestOptions={{
+          requestNonPersonalizedAdsOnly: true,
+        }}
+      />
       <ScrollView
         showsVerticalScrollIndicator={false}
         showsHorizontalScrollIndicator={false}

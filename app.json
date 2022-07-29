@@ -3,8 +3,9 @@
     "name": "ip-finder",
     "slug": "ip-finder",
     "version": "1.0.0",
-    "assetBundlePatterns": [
-      "**/*"
-    ]
+    "assetBundlePatterns": ["**/*"]
+  },
+  "react-native-google-mobile-ads": {
+    "android_app_id": "ca-app-pub-6947784507365792~7867856233"
   }
 }
