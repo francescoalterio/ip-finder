@@ -67,14 +67,6 @@ const IPDataScreen = ({ navigation, route }) => {
           <Text style={styles.subtitle}>Country</Text>
           <Text style={styles.textData}>Capital: {route.params.capital}</Text>
           <Text style={styles.textData}>Borders: {route.params.borders}</Text>
-          <View style={styles.flagWrapper}>
-            <SvgUri
-              width="100%"
-              height="100%"
-              viewBox="0 0 500 500"
-              uri={route.params.flag.img}
-            />
-          </View>
         </View>
         <View style={styles.section}>
           <Text style={styles.subtitle}>Timezone</Text>

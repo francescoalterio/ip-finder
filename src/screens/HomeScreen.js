@@ -8,7 +8,6 @@ import {
 import React, { useState } from "react";
 import Constanst from "expo-constants";
 import Ionicons from "react-native-vector-icons/Ionicons";
-import { fakeData } from "../fakeData";
 import { colors } from "../constants/colors";
 
 const HomeScreen = ({ navigation }) => {

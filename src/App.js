@@ -5,20 +5,31 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HomeScreen from "./screens/HomeScreen";
 import IPDataScreen from "./screens/IPDataScreen";
+import { useNetInfo } from "@react-native-community/netinfo";
+import NotConnection from "./screens/NotConnection";
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
+  const netInfo = useNetInfo();
   return (
     <View style={styles.container}>
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Group>
-            <Stack.Screen
-              name="Home"
-              component={HomeScreen}
-              options={{ headerShown: false }}
-            />
+            {netInfo.isConnected === false ? (
+              <Stack.Screen
+                name="NotConnection"
+                component={NotConnection}
+                options={{ headerShown: false }}
+              />
+            ) : (
+              <Stack.Screen
+                name="Home"
+                component={HomeScreen}
+                options={{ headerShown: false }}
+              />
+            )}
           </Stack.Group>
           <Stack.Group screenOptions={{ presentation: "modal" }}>
             <Stack.Screen
