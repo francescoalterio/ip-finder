@@ -9,12 +9,15 @@ import React, { useState } from "react";
 import Constanst from "expo-constants";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { fakeData } from "../fakeData";
+import { colors } from "../constants/colors";
 
 const HomeScreen = ({ navigation }) => {
   const [ip, setIp] = useState("");
 
   const handleIPSearch = () => {
-    navigation.navigate("IPData", fakeData);
+    fetch(`http://ipwho.is/${ip}`)
+      .then((res) => res.json())
+      .then((result) => navigation.navigate("IPData", result));
   };
 
   return (
@@ -48,13 +51,13 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
   },
   title: {
-    color: "#f2f2f2",
+    color: colors.WHITE,
     fontSize: 18,
     marginBottom: 10,
     fontWeight: "bold",
   },
   ipInput: {
-    backgroundColor: "#141859",
+    backgroundColor: colors.SECTION,
     borderRadius: 5,
     height: 45,
     paddingHorizontal: 20,
