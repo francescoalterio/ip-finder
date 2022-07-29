@@ -1,4 +1,4 @@
-package com.ipfinder;
+package com.franstudios.ipfinder;
 
 import android.os.Build;
 import android.os.Bundle;

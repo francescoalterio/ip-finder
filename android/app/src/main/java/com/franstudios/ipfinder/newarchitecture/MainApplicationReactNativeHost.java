@@ -1,4 +1,4 @@
-package com.ipfinder.newarchitecture;
+package com.franstudios.ipfinder.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -19,9 +19,9 @@ import com.facebook.react.fabric.CoreComponentsRegistry;
 import com.facebook.react.fabric.EmptyReactNativeConfig;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.ipfinder.BuildConfig;
-import com.ipfinder.newarchitecture.components.MainComponentsRegistry;
-import com.ipfinder.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import com.franstudios.ipfinder.BuildConfig;
+import com.franstudios.ipfinder.newarchitecture.components.MainComponentsRegistry;
+import com.franstudios.ipfinder.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 
