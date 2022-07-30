@@ -3,7 +3,7 @@
     "name": "ip-finder",
     "slug": "ip-finder",
     "version": "1.0.0",
-    "icon": "./assets/adaptive-614.png",
+    "icon": "./assets/icon.png",
     "assetBundlePatterns": ["**/*"],
     "android": {
       "package": "com.franstudios.ipfinder",
@@ -13,7 +13,7 @@
         }
       },
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-614.png"
+        "foregroundImage": "./assets/icon.png"
       }
     }
   },
