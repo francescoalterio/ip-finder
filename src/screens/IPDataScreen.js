@@ -61,7 +61,7 @@ const IPDataScreen = ({ navigation, route }) => {
           requestNonPersonalizedAdsOnly: true,
         }}
       />
-      <View style={{ flex: 1, paddingHorizontal: 20 }}>
+      <View style={{ flex: 1, paddingHorizontal: 20, marginTop: 20 }}>
         <ScrollView
           showsVerticalScrollIndicator={false}
           showsHorizontalScrollIndicator={false}

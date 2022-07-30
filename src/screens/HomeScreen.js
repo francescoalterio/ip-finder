@@ -24,7 +24,9 @@ const HomeScreen = ({ navigation }) => {
   const handleIPSearch = () => {
     fetch(`http://ipwho.is/${ip}`)
       .then((res) => res.json())
-      .then((result) => navigation.navigate("IPData", result));
+      .then((result) => {
+        result.success && navigation.navigate("IPData", result);
+      });
   };
 
   return (
