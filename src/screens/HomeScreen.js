@@ -29,7 +29,7 @@ const HomeScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <View style={{ flex: 1 }}>
+      <View style={{ flex: 1, paddingHorizontal: 20 }}>
         <View>
           <Text style={styles.title}>Find any IP</Text>
           <TextInput
@@ -64,7 +64,6 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingTop: Constanst.statusBarHeight + 20,
     backgroundColor: "#03074d",
-    paddingHorizontal: 20,
   },
   title: {
     color: colors.WHITE,
