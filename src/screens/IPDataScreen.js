@@ -21,11 +21,17 @@ import {
   useInterstitialAd,
 } from "react-native-google-mobile-ads";
 
-const adUnitId = TestIds.BANNER;
+const adUnitId = __DEV__
+  ? TestIds.BANNER
+  : "ca-app-pub-6947784507365792/6473253203";
+
+const adUnitIdInterstitial = __DEV__
+  ? TestIds.BANNER
+  : "ca-app-pub-6947784507365792/7731043298";
 
 const IPDataScreen = ({ navigation, route }) => {
   const { isLoaded, isClosed, load, show } = useInterstitialAd(
-    TestIds.INTERSTITIAL,
+    adUnitIdInterstitial,
     {
       requestNonPersonalizedAdsOnly: true,
     }

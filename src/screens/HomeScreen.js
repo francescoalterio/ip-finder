@@ -17,7 +17,9 @@ import {
   TestIds,
 } from "react-native-google-mobile-ads";
 
-const adUnitId = TestIds.BANNER;
+const adUnitId = __DEV__
+  ? TestIds.BANNER
+  : "ca-app-pub-6947784507365792/4135660631";
 
 const HomeScreen = ({ navigation }) => {
   const [ip, setIp] = useState("");
