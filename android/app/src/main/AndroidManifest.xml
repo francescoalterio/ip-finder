@@ -24,23 +24,29 @@
         <category android:name="android.intent.category.LAUNCHER"/>
       </intent-filter>
       <intent-filter>
-        
-        
-        
-        
-        
-        
-        z
-      
-        
-        
-        
-        
-      
-        
-        
-        
-        
+        &#xD;
+        &#xD;
+        &#xD;
+        &#xD;
+        &#xD;
+        &#xD;
+        &#xD;
+        z&#xD;
+      &#xD;
+        &#xD;
+        &#xD;
+        &#xD;
+        &#xD;
+      &#xD;
+        &#xD;
+        &#xD;
+        &#xD;
+        &#xD;
+      &#xD;
+        &#xD;
+        &#xD;
+        &#xD;
+        &#xD;
       
         <action android:name="android.intent.action.VIEW"/>
         <category android:name="android.intent.category.DEFAULT"/>
