@@ -3,11 +3,14 @@
     "name": "ip-finder",
     "slug": "ip-finder",
     "version": "1.0.0",
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "android": {
-      "package": "com.franstudios.ipfinder"
+      "package": "com.franstudios.ipfinder",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyAF2DFk0FvPpg8O3Dq8C7AJklx9BJ0BFYE"
+        }
+      }
     }
   },
   "react-native-google-mobile-ads": {
