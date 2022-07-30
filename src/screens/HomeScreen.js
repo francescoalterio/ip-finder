@@ -4,6 +4,7 @@ import {
   View,
   TouchableOpacity,
   TextInput,
+  Alert,
 } from "react-native";
 import React, { useState } from "react";
 import Constanst from "expo-constants";
@@ -25,7 +26,12 @@ const HomeScreen = ({ navigation }) => {
     fetch(`http://ipwho.is/${ip}`)
       .then((res) => res.json())
       .then((result) => {
-        result.success && navigation.navigate("IPData", result);
+        result.success
+          ? navigation.navigate("IPData", result)
+          : Alert.alert(
+              "Invalid IP",
+              "The IP you entered is invalid or not found"
+            );
       });
   };
 
